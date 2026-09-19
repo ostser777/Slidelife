@@ -20,7 +20,7 @@ main { min-height: 100vh; overflow: hidden; padding: 26px 20px 58px; position: r
 .orb { position: fixed; border-radius: 50%; opacity: .76; pointer-events: none; }
 .orb-one { width: max(330px, 35vw); height: max(330px, 35vw); top: -18vw; left: -16vw; background: #dde5ff; }
 .orb-two { width: max(250px, 26vw); height: max(250px, 26vw); right: -13vw; bottom: -13vw; background: #ffe1d6; }
-.app-shell { width: min(100%, 690px); margin: 0 auto; position: relative; z-index: 1; }
+.app-shell { width: min(100%, 1120px); margin: 0 auto; position: relative; z-index: 1; }
 
 .topbar { display: flex; align-items: center; justify-content: space-between; margin-bottom: 27px; }
 .brand { color: var(--ink); font-size: clamp(33px, 6vw, 47px); font-weight: 800; letter-spacing: -3.2px; line-height: 1; text-decoration: none; }
@@ -93,6 +93,19 @@ h1 { max-width: 520px; margin-bottom: 0; font: 700 clamp(29px, 6vw, 43px)/1.08 "
 .toast { position: fixed; z-index: 3; bottom: 27px; left: 50%; display: flex; width: min(calc(100% - 40px), 430px); gap: 12px; align-items: start; padding: 15px; transform: translateX(-50%); border-radius: 18px; background: var(--ink); color: #fff; box-shadow: 0 14px 35px rgba(11,20,52,.24); }
 .toast > span { display: grid; width: 32px; height: 32px; place-items: center; border-radius: 10px; background: #c8ff53; color: var(--ink); }
 .toast p { margin: 3px 0 0; color: #cbd4ec; font-size: 13px; }
+
+@media (min-width: 800px) {
+  main { padding: 34px 44px 64px; }
+  .app-shell { display: grid; grid-template-columns: minmax(280px, .78fr) minmax(460px, 1.22fr); column-gap: clamp(36px, 6vw, 86px); align-items: start; }
+  .topbar { grid-column: 1 / -1; margin-bottom: 74px; }
+  .intro { grid-column: 1; align-self: end; padding-top: 58px; }
+  .intro h1 { font-size: clamp(45px, 4.3vw, 67px); line-height: .98; }
+  .topic-scroll { grid-column: 1; display: grid; grid-template-columns: max-content max-content; align-content: start; justify-content: start; overflow: visible; padding-top: 20px; }
+  .story-card { grid-column: 2; grid-row: 2 / span 3; min-height: 740px; margin-top: 0; }
+  .story-copy h2 { font-size: clamp(47px, 4.5vw, 66px); }
+  .create-link { grid-column: 1; justify-self: start; align-self: start; margin: 36px 0 0; }
+  .orb-one { width: min(42vw, 620px); height: min(42vw, 620px); top: -22vw; left: -19vw; opacity: .55; }
+}
 
 @media (max-width: 520px) {
   main { padding: 18px 12px 43px; }
