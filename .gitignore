@@ -1,0 +1,15 @@
+# dependencies
+/node_modules
+
+# Next.js build output
+/.next
+/out
+
+# local environment files
+.env*
+
+# system files
+.DS_Store
+
+# local scratch artifacts
+/tmp
